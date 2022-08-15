@@ -21,16 +21,12 @@ app.addEventListener("click", function(event){
 
 
 async function open_terminal(){
-  createText("Welcome");
+  createText("welcome");
   await delay(700);
-  createText("Starting the server...");
+  createText("connecting to server...");
   await delay(1500);
-  createText("You can run several commands:");
+  createText("connection successful");
  
-  createCode("about me", "Who am i and what do i do.");
-  createCode("all", "See all commands.");
-  createCode("social -a", "All my social networks.");
-
   await delay(500);
   new_line();
 }
@@ -44,7 +40,7 @@ function new_line(){
   p.setAttribute("class", "path")
   p.textContent = "# user";
   span1.textContent = " in";
-  span2.textContent = " ~/heber-leonard";
+  span2.textContent = " ~/gyokuryū";
   p.appendChild(span1);
   p.appendChild(span2);
   app.appendChild(p);
@@ -71,26 +67,26 @@ async function getInputValue(){
   if(value === "all"){
     trueValue(value);
     
-    createCode("projects", "My github page with my projects. Follow me there ;)");
-    createCode("about me", "Who am i and what do i do.");
-    createCode("social -a", "All my social networks.");
+    createCode("products", "our latest offerings.");
+    createCode("services", "our service offerings.");
+    createCode("contact", "in case of emergency only.");
     createCode("clear", "Clean the terminal.");
     
   }
-  else if(value === "projects"){
+  else if(value === "products"){
     trueValue(value);
-    createText("<a href='https://github.com/heberleonard2' target='_blank'><i class='fab fa-github white'></i> github.com/heberleonard2</a>")
+    createText("<a href='https://github.com/heberleonard2' target='_blank'><i class='fab fa-github white'></i> enter guns and drugs here</a>")
   }
-  else if(value === "about me"){
+  else if(value === "services"){
     trueValue(value);
     createText("Oi, meu nome é Héber ;)")
-    createText("Desenvolvedor atualmente focado em todo o ecossistema Javascript. Utilizando principalmente a stack <span class='blue'>Node, React e React Native </span>por permitir criar aplicações de forma descomplicada e produtiva.")
+    createText("we do not disclose our services <span class='blue'>here on our website</span>see us in person.")
   }
-  else if(value === "social -a"){
+  else if(value === "contact"){
     trueValue(value);
-    createText("<a href='https://github.com/heberleonard2' target='_blank'><i class='fab fa-github white'></i> github.com/heberleonard2</a>")
-    createText("<a href='https://www.linkedin.com/in/heber-leonard/' target='_blank'><i class='fab fa-linkedin-in white'></i> linkedin.com/in/heber-leonard</a>")
-    createText("<a href='https://www.instagram.com/heber_leonard/' target='_blank'><i class='fab fa-instagram white'></i> instagram.com/heber_leonard</a>")
+    createText("<a href='' target='_blank'><i class='fab fa-github white'></i> jake williams</a>")
+    createText("<a href='' target='_blank'><i class='fab fa-linkedin-in white'></i> eddie kim</a>")
+    createText("<a href='' target='_blank'><i class='fab fa-instagram white'></i> horitsu saito</a>")
   }
   else if(value === "social"){
     trueValue(value);
